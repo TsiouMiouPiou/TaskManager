@@ -17,7 +17,7 @@ app.use('/api/v1/tasks', tasks)
 
 // Its a good tactic to try catch block in async await
 const start = async () => {
-    try{                    // we want to pass the value to DB
+    try{                    // we want to pass the URI value to DB
         await connectDB(process.env.MONGO_URI) // We start the server only if the connection to DB is ok!!!
         app.listen(port, console.log(`Server is listening on port ${port}...`));
     } catch (error) {   // Otherwise we throught an error
@@ -26,5 +26,3 @@ const start = async () => {
 }
 start()
 
-// USERNAME = ganastasiou
-// PASSWORD = afjIaGBOybp62xPg
